@@ -16,8 +16,8 @@
 
     <div class="container col d-flex">
         <div class="col-4 d-flex flex-column ">
-            <input type="text">
-            <button type="buttonSearch" class="btn btn-primary btn-md my-3">Search</button>
+            <input type="text" id="searchBar">
+            <button id="buttonSearch" class="btn btn-primary btn-md my-3">Search</button>
             <button type="buttonAustin" class="btn btn-secondary btn-md my-3">Austin</button>
             <button type="buttonChicago" class="btn btn-secondary btn-md my-3">Chicago</button>
             <button type="buttonNewYork" class="btn btn-secondary btn-md my-3">New York</button>
@@ -30,11 +30,11 @@
 
         <div class="col-8">
             <div class="d-flex flex-column border row-12" id="borderInfoContainer">
-                <div class="cityDate">cityDate</div>
-                <div class="temp">temp</div>
-                <div class="wind">wind</div>
-                <div class="humidity">humidity</div>
-                <div class="uv-index">uv-index</div>
+                <div id="cityDate">cityDate</div>
+                <div id="temp">temp</div>
+                <div id="wind">wind</div>
+                <div id="humidity">humidity</div>
+                <div id="uv-index">uv-index</div>
             </div>
 
             <div class="row-12" style="margin-top:150px; margin-left:15px;">
@@ -104,7 +104,7 @@
 
             </div>
         </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./assets/script/script.js"></script>
 </body>
 </html>
