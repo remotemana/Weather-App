@@ -38,6 +38,9 @@ var fiveDay5Temp = document.getElementById("temp5")
 var fiveDay5Wind = document.getElementById("wind5")
 var fiveDay5Humidity = document.getElementById("humidity5")
 
+var currentIconImg = document.getElementById("currentIcon")
+
+
 
 function getAPI() {
     var city = document.getElementById("searchBar").value;
@@ -61,34 +64,55 @@ function getAPI() {
                     uvIndex.innerText="  Current Uv-Index: " + data.current.uvi;
 
                     fiveDay1header.innerText= moment.unix(data.daily[1].dt).format("MMM Do YY");
-                    // fiveDay1Icon.innerText= data.daily[1].weather[0]
                     fiveDay1Temp.innerText= "Temp:   " + data.daily[1].temp.day + " F";
                     fiveDay1Wind.innerText= "WS:   " + data.daily[1].wind_speed + " mph";
                     fiveDay1Humidity.innerText= "HMD:   " + data.daily[1].humidity + " %" ;
 
                     fiveDay2header.innerText= moment.unix(data.daily[2].dt).format("MMM Do YY");
-                    // fiveDay1Icon.innerText= data.daily[1].weather[0]
                     fiveDay2Temp.innerText= "Temp:   " + data.daily[2].temp.day + " F";
                     fiveDay2Wind.innerText= "WS:   " + data.daily[2].wind_speed + " mph";
                     fiveDay2Humidity.innerText= "HMD:   " + data.daily[2].humidity + " %"; 
 
                     fiveDay3header.innerText= moment.unix(data.daily[3].dt).format("MMM Do YY");
-                    // fiveDay1Icon.innerText= data.daily[1].weather[0]
                     fiveDay3Temp.innerText= "Temp:   " + data.daily[3].temp.day + " F";
                     fiveDay3Wind.innerText= "WS:   " + data.daily[3].wind_speed + " mph";
                     fiveDay3Humidity.innerText= "HMD:   " + data.daily[3].humidity + " %"; 
 
-                    fiveDay4header.innerText= moment.unix(data.daily[4].dt).format("MMM Do YY");
-                    // fiveDay1Icon.innerText= data.daily[1].weather[0]
+                    fiveDay4header.innerText= moment.unix(data.daily[4].dt).format("MMM Do YY")
                     fiveDay4Temp.innerText= "Temp:   " + data.daily[4].temp.day + " F";
                     fiveDay4Wind.innerText= "WS:   " + data.daily[4].wind_speed + " mph";
                     fiveDay4Humidity.innerText= "HMD:   " + data.daily[4].humidity + " %";
 
-                    fiveDay5header.innerText= moment.unix(data.daily[5].dt).format("MMM Do YY");
-                    // fiveDay1Icon.innerText= data.daily[1].weather[0]
+                    fiveDay5header.innerText= moment.unix(data.daily[5].dt).format("MMM Do YY")
                     fiveDay5Temp.innerText= "Temp:   " + data.daily[5].temp.day + " F";
                     fiveDay5Wind.innerText= "WS:   " + data.daily[5].wind_speed + " mph";
                     fiveDay5Humidity.innerText= "HMD:   " + data.daily[5].humidity + " %";
+
+                    var currentIcon = data.daily[0].weather[0].icon
+                    var icon1 = data.daily[1].weather[0].icon
+                    var icon2 = data.daily[2].weather[0].icon
+                    var icon3 = data.daily[3].weather[0].icon
+                    var icon4 = data.daily[4].weather[0].icon
+                    var icon5 = data.daily[5].weather[0].icon
+
+                    var urlCurrent ="http://openweathermap.org/img/wn/" + currentIcon + "@2x.png" 
+                    var url1 = "http://openweathermap.org/img/wn/" + icon1 + "@2x.png" 
+                    var url2 = "http://openweathermap.org/img/wn/" + icon2 + "@2x.png"
+                    var url3 = "http://openweathermap.org/img/wn/" + icon3 + "@2x.png"
+                    var url4 = "http://openweathermap.org/img/wn/" + icon4 + "@2x.png"
+                    var url5 = "http://openweathermap.org/img/wn/" + icon5 + "@2x.png"
+
+                    currentIconImg.src = urlCurrent
+                    fiveDay1Icon.src = url1
+                    fiveDay2Icon.src = url2
+                    fiveDay3Icon.src = url3
+                    fiveDay4Icon.src = url4
+                    fiveDay5Icon.src = url5
+                    
+
+                    if (condition) {
+                        
+                    }
 
                 })
                 // temp.innerText=data.main.temp

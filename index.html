@@ -15,7 +15,7 @@
     </header>
 
     <div class="container col d-flex">
-        <div class="col-4 d-flex flex-column ">
+        <div class="col-4 d-flex flex-column">
             <input type="text" id="searchBar">
             <button id="buttonSearch" class="btn btn-primary btn-md my-3">Search</button>
             <button type="buttonAustin" class="btn btn-secondary btn-md my-3">Austin</button>
@@ -28,7 +28,7 @@
             <button type="buttonAtlanta" class="btn btn-secondary btn-md my-3">Atlanta</button>
         </div>
 
-        <div class="col-8" style="margin-left: 50px;">
+        <div class="col-8" style="margin-left: 50px; margin-top: 50px;">
             <div class="d-flex flex-column border row-12" id="borderInfoContainer">
                 <div id="cityDate">Today's Date: </div>
                 <div id="temp">Current Temperature: </div>
@@ -36,17 +36,18 @@
                 <div id="humidity">Current Humidity: </div>
                 <div id="uv-index">Current UV-Index: </div>
             </div>
-
-            <div class="row-12" style="margin-top:150px; margin-left:15px;">
+            <img src="" id="currentIcon" style="height: 200px; width: 200px; margin-left: 400px; margin-top: -160px" alt="loading img"></img>
+            
+            <div class="row-12" style="margin-top: 50px; margin-left:15px;">
                     <h1>5-Day-Forecast</h1>
             </div>
 
             <div class="cardContainer row-12 d-flex">
                 <div class="cardOne">
                     <div class="card text-white bg-info mx-3" style="max-width: 18rem; margin-top: 25px; height: 250px;">
-                        <div id="header1"> date</div>
+                        <div id="header1" style="margin-left: 20px;"> date</div>
                         <div class="card-body">
-                          <h5 id="weatherIcon1"> weatherIcon</h5>
+                          <img src="" id="weatherIcon1"></img>
                           <div id="temp1"> temp</div>
                           <div id="wind1"> wind</div>
                           <div id="humidity1"> humidity</div>
@@ -56,9 +57,9 @@
 
                 <div class="cardTwo">
                     <div class="card text-white bg-info mx-3" style="max-width: 18rem; margin-top: 25px; height: 250px;">
-                        <div id="header2">date</div>
+                        <div id="header2" style="margin-left: 20px">date</div>
                         <div class="card-body">
-                          <h5 id="weatherIcon2">weatherIcon</h5>
+                          <img src="" id="weatherIcon2"></img>
                           <div id="temp2">temp</div>
                           <div id="wind2">wind</div>
                           <div id="humidity2">humidity</div>
@@ -68,9 +69,9 @@
                 
                 <div class="cardThree">
                     <div class="card text-white bg-info mx-3" style="max-width: 18rem; margin-top: 25px; height: 250px;">
-                        <div id="header3">date</div>
+                        <div id="header3" style="margin-left: 20px">date</div>
                         <div class="card-body">
-                          <h5 id="weatherIcon3">weatherIcon</h5>
+                          <img src="" id="weatherIcon3"></img>
                           <div id="temp3">temp</div>
                           <div id="wind3">wind</div>
                           <div id="humidity3">humidity</div>
@@ -80,9 +81,9 @@
 
                 <div class="cardFour">
                     <div class="card text-white bg-info mx-3" style="max-width: 18rem; margin-top: 25px; height: 250px;">
-                        <div id="header4">date</div>
+                        <div id="header4" style="margin-left: 20px">date</div>
                         <div class="card-body">
-                          <h5 id="weatherIcon4">weatherIcon</h5>
+                          <img src="" id="weatherIcon4"></img>
                           <div id="temp4">temp</div>
                           <div id="wind4">wind</div>
                           <div id="humidity4">humidity</div>
@@ -92,9 +93,9 @@
 
                 <div class="cardFive">
                     <div class="card text-white bg-info mx-3" style="max-width: 18rem; margin-top: 25px; height: 250px;">
-                        <div id="header5">date</div>
+                        <div id="header5" style="margin-left: 20px">date</div>
                         <div class="card-body">
-                          <h5 id="weatherIcon5">weatherIcon</h5>
+                          <img id="weatherIcon5"></img>
                           <div id="temp5">temp</div>
                           <div id="wind5">wind</div>
                           <div id="humidity5">humidity</div>
