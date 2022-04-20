@@ -109,10 +109,17 @@ function getAPI() {
                     fiveDay4Icon.src = url4
                     fiveDay5Icon.src = url5
                     
+                    var uvColor = data.current.uvi
 
-                    if (condition) {
-                        
+                    if (uvColor <= 2) {
+                        uvIndex.style.backgroundColor = "green";
+                    } else if (uvColor >= 3 && uvColor <= 7) {
+                        uvIndex.style.backgroundColor = "yellow";
+                    } else if (uvColor >= 8 ) {
+                        uvIndex.style.backgroundColor = "red";
                     }
+
+
 
                 })
                 // temp.innerText=data.main.temp
