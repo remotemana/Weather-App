@@ -113,7 +113,7 @@ function getAPI() {
 
                     if (uvColor <= 2) {
                         uvIndex.style.backgroundColor = "green";
-                    } else if (uvColor >= 3 && uvColor <= 7) {
+                    } else if (uvColor >= 2 && uvColor <= 8) {
                         uvIndex.style.backgroundColor = "yellow";
                     } else if (uvColor >= 8 ) {
                         uvIndex.style.backgroundColor = "red";
